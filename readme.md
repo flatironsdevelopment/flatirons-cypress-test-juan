@@ -64,6 +64,12 @@ Custom scenario:
 Description: You can create your own scenario, choose a functionality in the flatirons fuse and test it.
 ```
 
+## Go Beyond
+
+As an extra task, create an automated CI pipeline for one of those tools:
+- [Circle CI](https://circleci.com/)
+- [Github actions](https://docs.github.com/en/actions)
+
 ## Running Tests
 
 ### Opening the Cypress Test Runner
