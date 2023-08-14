@@ -32,8 +32,9 @@ Before you begin, ensure you have the following software installed on your machi
 
 You will test one of our internal applications called [Flatirons Fuse](https://flatirons.com/products/fuse/).
 Flatirons Fuse is an embeddable CSV importer.
-You need to implement the following scenarios using cypress, implement the same test in desktop viewport and mobile viewport:
+The application is hosted at: https://fuse-develop.flatirons.com/
 
+You need to implement the following scenarios using cypress, implement the same test in desktop viewport and mobile viewport:
 ```
 Create an Account:
 
