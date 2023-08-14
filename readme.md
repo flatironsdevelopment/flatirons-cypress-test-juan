@@ -18,7 +18,7 @@ Before you begin, ensure you have the following software installed on your machi
    Open your terminal and navigate to the project directory:
 
    ```bash
-   cd path/to/flatirons-cypress
+   cd path/to/flatirons-cypress-test
    ```
 
 3. **Install Dependencies:**
