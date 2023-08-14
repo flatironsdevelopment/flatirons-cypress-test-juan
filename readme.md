@@ -33,6 +33,7 @@ Before you begin, ensure you have the following software installed on your machi
 You will test one of our internal applications called [Flatirons Fuse](https://flatirons.com/products/fuse/).
 Flatirons Fuse is an embeddable CSV importer.
 The application is hosted at: https://fuse-develop.flatirons.com/
+Please use best practices for testing a third-party service in your tests.
 
 You need to implement the following scenarios using cypress, implement the same test in desktop viewport and mobile viewport:
 ```
@@ -57,6 +58,30 @@ Click the "Login" button.
 Verify that the user is redirected to the importers page.
 Ensure that the user is successfully logged in and their information is displayed correctly.
 
+```
+
+```
+Stripe Embedded Checkout Test Scenario:
+
+Description: This scenario tests the upgrade of a user's plan using the Stripe embedded checkout process.
+Steps:
+1. Navigate to the "Billing & Plans" section of the application.
+2. Verify that the user is presented with the current plan details and upgrade options.
+3. Click on the "Upgrade" button corresponding to the "Pro" plan.
+4. Verify that the Stripe embedded checkout form is loaded successfully.
+5. Fill in the following credit card information in the Stripe embedded checkout form:
+   - Card Holder: Any valid name
+   - Email: Any valid email
+   - Credit Card Number: 4242 4242 4242 4242 (Stripe test card number)
+   - Expiry Date: Any valid future date
+   - CVV: Any 3-digit number
+6. Click on the "Upgrade Plan" button within the Stripe embedded checkout form.
+7. Wait for the checkout process to complete.
+8. Verify that the operation concludes successfully by:
+   - Checking for a success message indicating the plan upgrade.
+   - Ensuring that the user's account now reflects the "Pro" plan status.
+
+Note: The credit card information provided in step 5 can be one of Stripe's test credit card numbers. These numbers are used for testing purposes and do not perform actual transactions.
 ```
 
 ```
