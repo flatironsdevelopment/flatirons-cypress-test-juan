@@ -39,62 +39,25 @@ You need to implement the following scenarios using cypress, implement the same 
 ```
 Create an Account:
 
-Description: This scenario tests the create an account functionality.
-Steps:
-Navigate to the sign up page.
-Fill the form with valid information.
-Click the "Sign Up" button.
-Verify that the user can see the check your email message.
+As a user, I can register for the platform.
 ```
 
 ```
 Email and Password Login:
 
-Description: This scenario tests the login functionality using email and password.
-Steps:
-Navigate to the login page.
-Enter a valid email and password combination.
-Click the "Login" button.
-Verify that the user is redirected to the importers page.
-Ensure that the user is successfully logged in and their information is displayed correctly.
-
+As a user, I can login to the platform using email and password.
+As a user, I can login to the platform using GitHub
 ```
 
 ```
 Stripe Embedded Checkout Test Scenario:
 
 Description: This scenario tests the upgrade of a user's plan using the Stripe embedded checkout process.
-Steps:
-1. Navigate to the "Billing & Plans" section of the application.
-2. Verify that the user is presented with the current plan details and upgrade options.
-3. Click on the "Upgrade" button corresponding to the "Pro" plan.
-4. Verify that the Stripe embedded checkout form is loaded successfully.
-5. Fill in the following credit card information in the Stripe embedded checkout form:
-   - Card Holder: Any valid name
-   - Email: Any valid email
-   - Credit Card Number: 4242 4242 4242 4242 (Stripe test card number)
-   - Expiry Date: Any valid future date
-   - CVV: Any 3-digit number
-6. Click on the "Upgrade Plan" button within the Stripe embedded checkout form.
-7. Wait for the checkout process to complete.
-8. Verify that the operation concludes successfully by:
-   - Checking for a success message indicating the plan upgrade.
-   - Ensuring that the user's account now reflects the "Pro" plan status.
 
-Note: The credit card information provided in step 5 can be one of Stripe's test credit card numbers. These numbers are used for testing purposes and do not perform actual transactions.
+As a user, I can subscribe to a plan using my credit card.
+
+Note: The credit card information provided can be one of Stripe's test credit card numbers. These numbers are used for testing purposes and do not perform actual transactions.
 ```
-
-```
-Custom scenario:
-
-Description: You can create your own scenario, choose a functionality in the flatirons fuse and test it.
-```
-
-## Go Beyond
-
-As an extra task, create an automated CI pipeline for one of those tools:
-- [Circle CI](https://circleci.com/)
-- [Github actions](https://docs.github.com/en/actions)
 
 ## Running Tests
 
