@@ -1,7 +1,7 @@
 import CreateAccountPage from "./pages/CreateAccountPage";
 import moment from "moment";
 
-describe("Account Creation", () => {
+describe("I can register for the platform.", () => {
   const testData = require("../fixtures/testData.json");
 
   beforeEach(() => {
@@ -11,7 +11,7 @@ describe("Account Creation", () => {
     cy.visit(testData.dev.baseUrl + "/users/sign-up");
   });
 
-  it("Creates a new account", () => {
+  it("Creates a new account with email and password", () => {
     const now = moment().format("MM-DD-YY-hmmss");
     const email = `TestEmail_${now}@gmail.com`;
 

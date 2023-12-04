@@ -1,6 +1,6 @@
 import BillingPage from "./pages/BillingPage";
 
-describe("Stripe Checkout", () => {
+describe("Stripe Embedded Checkout Test Scenario", () => {
   const testData = require("../fixtures/testData.json");
 
   beforeEach(() => {
@@ -14,7 +14,7 @@ describe("Stripe Checkout", () => {
     cy.visit(testData.dev.baseUrl + "/account/billing");
   });
 
-  it("Subscribes to a plan using Stripe checkout", () => {
+  it("I can subscribe to a plan using my credit card", () => {
     cy.get("body").should("contain", "Your Plan");
 
     BillingPage.planButton.eq(0).click();
