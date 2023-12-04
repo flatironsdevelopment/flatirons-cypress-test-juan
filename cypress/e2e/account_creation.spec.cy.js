@@ -12,10 +12,10 @@ describe("I can register for the platform.", () => {
   });
 
   it("Creates a new account with email and password", () => {
-    const now = moment().format("MM-DD-YY-hmmss");
-    const email = `TestEmail_${now}@gmail.com`;
+    const now = moment().format("MM-DD-YY-hmmss"); //calling the moment function and saving the current time and date as a constant variable
+    const email = `TestEmail_${now}@gmail.com`; //creating a custom email for testing including the current date to avoid duplicates
 
-    CreateAccountPage.firstNameInput.type(`TestName_${now}`);
+    CreateAccountPage.firstNameInput.type(`TestName_${now}`); 
     CreateAccountPage.lastNameInput.type(`TestLastName_${now}`);
     CreateAccountPage.companyNameInput.type(`TestCompanyName_${now}`);
     CreateAccountPage.emailInput.type(email);
