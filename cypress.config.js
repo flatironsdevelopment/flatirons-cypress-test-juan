@@ -1,9 +1,9 @@
 const { defineConfig } = require("cypress");
+const testData = require("./cypress/fixtures/testData.json");
 
 module.exports = defineConfig({
   e2e: {
-    setupNodeEvents(on, config) {
-      // implement node event listeners here
-    },
+    baseUrl: testData.dev.baseUrl,
+    chromeWebSecurity: false,
   },
 });
