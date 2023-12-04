@@ -61,6 +61,9 @@ Note: The credit card information provided can be one of Stripe's test credit ca
 
 ## Running Tests
 
+### Setting up the test data
+Before running any tests, we need to first add the test data that we are going to need, so in order to do that go to the file /cypress/fixtures/example.json where we already have an example file with the fields for the data that we need, populate those fields with valid test information and then change the file name to testData.json which is the name expected by the code and now you are good to continue with the test execution.
+
 ### Opening the Cypress Test Runner
 
 To open the Cypress Test Runner and interactively run tests, execute the following command:
@@ -73,10 +76,18 @@ This will open the Cypress Test Runner interface, where you can select and run i
 
 ### Running Tests in Command-line Mode
 
-To run tests in the command-line mode (headless), execute the following command:
+To run tests in the command-line mode (headless), execute the following command which uses macbook-15 as the default viewport:
 
 ```bash
-yarn cypress:run
+npx cypress run
+```
+
+### Running Tests in Command-line Mode with mobile viewport
+
+To run tests in the command-line mode (headless) with a mobile viewport, execute the following command for iphone 6, if you want to use a different viewport use one of the supported viewports from the official cypress documentation here https://docs.cypress.io/api/commands/viewport:
+
+```bash
+npx cypress run --env viewport=iphone-6
 ```
 
 This will execute all the defined test cases without the graphical interface.
